@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="login.component.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+<div class="container">
+
+    <br><br>
+
+    <div style="background:white" class="page-holder bg-cover">
+        <div class="bg-primary text-center">
+            <img src="/assets/login/lock--v2.png" />
+        </div>
+
+        <div class="row featurette ">
+
+            <div class="col "></div>
+
+            <div class="col text-center" style=" background:white ">
+                <br>
+                <h1>Iniciar Sesión</h1>
+                <br>
+                <form [formGroup]="myForm " class="form ">
+
+                    <!--Mail-->
+                    <div>
+                        <label for=" ">Correo:</label>
+                        <input type="email" class="form-control " formControlName="mail">
+                    </div>
+
+                    <div *ngIf="myForm.get( 'mail').errors && myForm.get( 'mail').dirty ">
+                        <p class="text-danger " *ngIf="myForm.get( 'mail').hasError( 'required') ">El campo es obligatorio</p>
+                        <p class="text-danger " *ngIf=" myForm.get( 'mail').hasError( 'pattern') ">Debe ser un correo valido</p>
+                    </div>
+                    <br>
+                    <!--Password-->
+                    <div>
+                        <label for=" ">Contraseña:</label>
+                        <input type="password" class="form-control " formControlName="password">
+                    </div>
+
+                    <div *ngIf="myForm.get( 'password').errors && myForm.get( 'password').dirty ">
+                        <p class="text-danger " *ngIf="myForm.get( 'password').hasError( 'required') ">El campo es obligatorio</p>
+                        <p class="text-danger " *ngIf=" myForm.get( 'password').hasError( 'pattern') ">Debe tener entre 6 y 10 caracteres alfanumericos</p>
+                    </div>
+
+                    <br>
+                    <input type="button " class="btn btn-primary button button4" value="Ingresar">
+                    <br>
+                    <br>
+
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                      </label>
+                </form>
+                <hr>
+
+                <div>
+                    <a href="#" class="text-primary">¿Olvidaste tu contraseña?</a>
+                    <a [routerLink]="['/record']" class="text-primary">¿Sos un usuario nuevo?</a>
+                </div>
+            </div>
+
+            <div class="col "></div>
+
+        </div>
+    </div>
+</div>

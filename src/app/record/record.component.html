@@ -1,0 +1,88 @@
+<br> <br>
+<div class="container-fluid">
+
+    <div class="row ">
+        <div class="col "></div>
+        <div class="col">
+
+            <div class=" text-center " style=" background:white">
+                <div class="bg-primary ">
+                    <img src="/assets/record/edit--v2.png" />
+                </div>
+
+                <br>
+                <h1>Registrate</h1>
+                <br>
+                <form [formGroup]=" myForm ">
+                    <!--Name-->
+                    <div>
+                        <label for=" ">Nombre(*):</label>
+                        <input type="text " formControlName="name">
+                    </div>
+
+                    <div *ngIf="myForm.get( 'name').errors && myForm.get( 'name').dirty ">
+                        <p class="text-danger " *ngIf="myForm.get( 'name').hasError( 'required') ">El campo es obligatorio</p>
+                        <p class="text-danger " *ngIf="myForm.get( 'name').hasError( 'pattern') ">Debe contener entre 3 y 10 caracteres alfabeticos</p>
+                    </div>
+                    <br> <br>
+                    <!--Surname-->
+                    <div>
+                        <label for=" ">Apellido(*):</label>
+                        <input type="text " formControlName="surname">
+                    </div>
+
+                    <div *ngIf="myForm.get( 'surname').errors && myForm.get( 'surname').dirty ">
+                        <p class="text-danger " *ngIf="myForm.get( 'surname').hasError( 'required') ">El campo es obligatorio</p>
+                        <p class="text-danger " *ngIf="myForm.get( 'surname').hasError( 'pattern') ">Debe contener entre 3 y 10 caracteres alfabeticos</p>
+                    </div>
+
+                    <br> <br>
+
+                    <!--Phone-->
+                    <div>
+                        <label for=" ">Telefono:&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text " formControlName="phone">
+                    </div>
+
+                    <div *ngIf="myForm.get( 'phone').errors && myForm.get( 'phone').dirty ">
+                        <p class="text-danger " *ngIf="myForm.get( 'phone').hasError( 'pattern') ">Debe contener 10 caracteres numericos</p>
+                    </div>
+
+                    <br> <br>
+
+                    <!--Mail-->
+                    <div>
+                        <label for=" ">Correo(*):&nbsp;&nbsp;</label>
+                        <input type="email" formControlName="mail">
+                    </div>
+
+                    <div *ngIf="myForm.get( 'mail').errors && myForm.get( 'mail').dirty ">
+                        <p class="text-danger " *ngIf="myForm.get( 'mail').hasError( 'required') ">El campo es obligatorio</p>
+                        <p class="text-danger " *ngIf=" myForm.get( 'mail').hasError( 'pattern') ">Debe ser un correo valido</p>
+                    </div>
+
+                    <br> <br>
+
+                    <!--Password-->
+                    <div>
+                        <label for=" ">Contraseña(*):</label>
+                        <input type="password" formControlName="password">
+                    </div>
+
+                    <div *ngIf="myForm.get( 'password').errors && myForm.get( 'password').dirty ">
+                        <p class="text-danger " *ngIf="myForm.get( 'password').hasError( 'required') ">El campo es obligatorio</p>
+                        <p class="text-danger " *ngIf=" myForm.get( 'password').hasError( 'pattern') ">Debe tener entre 6 y 10 caracteres alfanumericos</p>
+                    </div>
+                    <br>
+                    <input class="btn btn-primary " type="button " value="Registrarse ">
+
+                </form>
+                <br> <a [routerLink]="[ '/login'] " class="text-primary ">¿Ya esta registrado? Inicie sesión aquí!</a>
+                <br> <br>
+            </div>
+            <br>
+            <br>
+        </div> <br>
+        <div class="col "></div>
+    </div>
+</div>

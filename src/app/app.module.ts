@@ -4,13 +4,36 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { HeaderComponent } from './header/header.component';
+import { FotterComponent } from './fotter/fotter.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { DetailComponent } from './detail/detail.component';
+import { RecordComponent } from './record/record.component';
+
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+
+import { HttpClientModule} from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FotterComponent,
+    HomeComponent,
+    LoginComponent,
+    DetailComponent,
+    RecordComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,ReactiveFormsModule,
+    HttpClientModule,
+    NgbModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

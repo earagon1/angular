@@ -1,0 +1,65 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Stalemate&display=swap" rel="stylesheet">
+
+<div class="container">
+
+    <br><br>
+
+    <div style="background:white" class="page-holder bg-cover">
+        <h1 style="font-family: 'Stalemate', cursive;" class="bg-primary text-white text-center display-1">Nuestros Productos</h1>
+        <div class="container-fluid ">
+
+            <div class="row featurette ">
+
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">{{product[0].name}} </h2>
+                    <p class="lead ">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                </div>
+
+                <div class="col-md-5 ">
+                    <img class="featurette-image img-fluid mx-auto" src="/assets/home/msi-mother.png" alt="Generic placeholder image ">
+                </div>
+
+            </div>
+
+            <hr class="featurette-divider ">
+
+            <div class="row featurette ">
+
+                <div class="col-md-5 ">
+                    <img class="featurette-image img-fluid mx-auto " src="/assets/home/notebook-HP.jpeg">
+                </div>
+
+                <div class="col-md-7 ">
+                    <h2 class="featurette-heading ">{{product[1].name}}</h2>
+                    <p class="lead ">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                </div>
+
+            </div>
+
+            <hr class="featurette-divider ">
+
+            <div class="row featurette ">
+
+                <div class="col-md-7 ">
+                    <h2 class="featurette-heading ">{{product[2].name}} </h2>
+                    <p class="lead ">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                </div>
+
+                <div class="col-md-5 ">
+                    <img class="featurette-image img-fluid mx-auto " src="/assets/home/office.jpeg" alt="Generic placeholder image ">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="bg-primary text-center ">
+            <h1 style=" font-family: 'Stalemate', cursive; " class="bg-primary text-white text-center display-1 ">Para ver los detalles de nuestros productos</h1>
+            <button type="button " [routerLink]="['/detail']" class="btn btn-info  ">Descripcion</button>
+            <br><br>
+        </div>
+
+
+    </div>
+</div>
