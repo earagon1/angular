@@ -5,33 +5,34 @@
     <div style="background:white" class="page-holder bg-cover">
         <div class="bg-primary text-center ">
             <h1 style=" font-family: 'Stalemate', cursive; " class="bg-primary text-white text-center display-1 ">Detalles de los productos</h1>
-        </div>
+            <!--</div>-->
 
-        <br>
-        <table class="table">
-            <thead class="thead-dark ">
-                <tr>
-                    <th scope="col">#</th>
 
-                    <th scope="col">Nombre</th>
+            <br>
+            <table class="table">
+                <thead class="thead-dark ">
+                    <tr>
+                        <th scope="col">#</th>
 
-                    <th scope="col">Precio</th>
+                        <th scope="col">Nombre</th>
 
-                    <th scope="col">Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let product of product ; index as i">
-                    <th scope="row ">{{ i + 1 }}</th>
-                    <th scope=" row ">{{product.name}}</th>
-                    <td>{{product.price}}</td>
-                    <td>{{product.description}}</td>
-                </tr>
-            </tbody>
-        </table>
-        <div style="background:white" class="page-holder bg-cover">
-            <div class="bg-primary text-center ">
-                <h3 [routerLink]="['/']" style=" font-family: 'Stalemate', cursive;  size: 20px; " class="bg-primary text-white text-center display-1 "> Volver atras</h3>
+                        <th scope="col">Precio!!</th>
+
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of product ; index as i">
+                        <th scope="row ">{{ i + 1 }}</th>
+                        <th scope=" row ">{{product.name}}</th>
+                        <td>{{product.price}}</td>
+                        <td>{{product.description}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="background:white" class="page-holder bg-cover">
+                <div class="bg-primary text-center ">
+                    <h3 [routerLink]="['/']" style=" font-family: 'Stalemate', cursive;  size: 20px; " class="bg-primary text-white text-center display-1 "> Volver atras</h3>
+                </div>
             </div>
         </div>
-    </div>
